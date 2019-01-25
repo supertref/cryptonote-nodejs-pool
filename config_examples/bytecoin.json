@@ -1,8 +1,8 @@
 {
-    "poolHost": "your.pool.host",
+    "poolHost": "13.81.27.250",
 
-    "coin": "bytecoin",
-    "symbol": "BCN",
+    "coin": "imkoin",
+    "symbol": "IMKO",
     "coinUnits": 100000000,
     "coinDecimalPlaces": 2,
     "coinDifficultyTarget": 240,
