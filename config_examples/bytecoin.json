@@ -4,11 +4,11 @@
     "coin": "bytecoin",
     "symbol": "BCN",
     "coinUnits": 100000000,
-    "coinDecimalPlaces": 4,
+    "coinDecimalPlaces": 2,
     "coinDifficultyTarget": 240,
 
-    "daemonType": "bytecoin",
-    "cnAlgorithm": "cryptonight",
+    "daemonType": "imkoin",
+    "cnAlgorithm": "cryptonight_heavy",
     "cnVariant": 0,
     "cnBlobType": 2,
 
@@ -27,8 +27,8 @@
     "poolServer": {
         "enabled": true,
         "clusterForks": "auto",
-        "poolAddress": "** Your pool wallet address **",
-        "intAddressPrefix": null,
+        "poolAddress": "NCkjgd8xJx9KTsuWubF61gdpEZJXQPbo9WYVCTwb5oQ6d8b4zLS8BgdY8s1RGv1QgEP3sBVEv5YTo1H6X9QcYCnL2P2iQdR",
+        "intAddressPrefix": 126,
         "blockRefreshInterval": 1000,
         "minerTimeout": 900,
         "sslCert": "./cert.pem",
@@ -36,42 +36,31 @@
         "sslCA": "./chain.pem",
         "ports": [
             {
-                "port": 3333,
-                "difficulty": 5000,
+                "port": 3334,
+                "difficulty": 100,
                 "desc": "Low end hardware"
             },
             {
-                "port": 4444,
-                "difficulty": 15000,
+                "port": 5556,
+                "difficulty": 2000,
                 "desc": "Mid range hardware"
             },
             {
-                "port": 5555,
-                "difficulty": 25000,
-                "desc": "High end hardware"
+                "port": 7778,
+                "difficulty": 400000,
+                "desc": "Nicehash or farms"
             },
             {
-                "port": 7777,
-                "difficulty": 500000,
-                "desc": "Cloud-mining / NiceHash"
-            },
-            {
-                "port": 8888,
-                "difficulty": 25000,
+                "port": 8889,
+                "difficulty": 10000,
                 "desc": "Hidden port",
                 "hidden": true
-            },
-            {
-                "port": 9999,
-                "difficulty": 20000,
-                "desc": "SSL connection",
-                "ssl": true
             }
         ],
         "varDiff": {
             "minDiff": 100,
-            "maxDiff": 100000000,
-            "targetTime": 60,
+            "maxDiff": 200000,
+            "targetTime": 100,
             "retargetTime": 30,
             "variancePercent": 30,
             "maxJump": 100
@@ -106,25 +95,25 @@
 
     "payments": {
         "enabled": true,
-        "interval": 1800,
+        "interval": 600,
         "maxAddresses": 50,
-        "mixin": 1,
+        "mixin": 2,
         "priority": 0,
-        "transferFee": 50000000,
+        "transferFee": 50000,
         "dynamicTransferFee": true,
         "minerPayFee" : true,
-        "minPayment": 1000000000,
-        "maxTransactionAmount": 50000000000000,
-        "denomination": 1000000000
+        "minPayment": 1000000,
+        "maxTransactionAmount": 0,
+        "denomination": 1000000
     },
 
     "blockUnlocker": {
         "enabled": true,
         "interval": 30,
         "depth": 10,
-        "poolFee": 0.8,
-        "devDonation": 0.2,
-        "networkFee": 0.0,
+        "poolFee": 1,
+        "devDonation": 0,
+        "networkFee": 0,
         "fixBlockHeightRPC": true
     },
 
@@ -136,7 +125,7 @@
         "port": 8117,
         "blocks": 30,
         "payments": 30,
-        "password": "your_password",
+        "password": "Tref1311",
         "ssl": false,
         "sslPort": 8119,
         "sslCert": "./cert.pem",
@@ -147,12 +136,12 @@
 
     "daemon": {
         "host": "127.0.0.1",
-        "port": 8081
+        "port": 8314
     },
 
     "wallet": {
         "host": "127.0.0.1",
-        "port": 8082
+        "port": 8320
     },
 
     "redis": {
